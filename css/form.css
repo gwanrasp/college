@@ -1,0 +1,110 @@
+
+
+#heading{
+text-align:center;
+padding:10px 20px 10px 20px;
+text-transform: uppercase;
+letter-spacing:1.5px;
+color:white;
+
+font-weight: 900;
+margin: 0.3em 0;
+}
+
+#app{
+
+margin: 0 auto;
+padding:10px 20px 10px 20px;
+
+background-color:rgba(12, 12, 12, 0.51);
+font-size:17px;
+background-repeat:no-repeat;
+background-attachment:relative;
+color:Lavender ;
+}
+
+
+
+input[type=text]{
+box-sizing:border-box;
+margin: 5px 0;
+padding:5px 10px;
+border-bottom: 2px solid CadetBlue  ;
+  margin-left: 11px;
+background-color:PapayaWhip ;
+}
+
+
+#date{
+box-sizing:border-box;
+margin: 5px 0;
+padding:5px 10px;
+border-bottom: 2px solid CadetBlue  ;
+margin-left: 11px;
+background-color:PapayaWhip ;
+}
+
+
+
+
+input[type=email]{
+box-sizing:border-box;
+margin: 5px 0;
+padding:5px 10px;
+border-bottom: 2px solid CadetBlue  ;
+margin-left: 11px;
+background-color:PapayaWhip ;
+}
+
+
+input[type=number]{
+box-sizing:border-box;
+margin: 5px 0;
+padding:5px 10px;
+border-bottom: 2px solid CadetBlue  ;
+margin-left: 11px;
+background-color:PapayaWhip ;
+}
+
+
+
+input[type=radio]{
+margin-left:33px;
+}
+
+#sc{
+margin-left:11px;
+background-color:PapayaWhip ;
+}
+
+
+
+
+
+
+input[type=submit]{
+padding:4px 8px; 
+text-align:center;
+border-radius:4px;
+background-color:CornflowerBlue;
+cursor:pointer;
+}
+
+input[type=submit]:hover{
+box-shadow: 2px 2px 2px gold;
+background-color:white; 
+}
+
+input[type=reset]{
+margin-left:30px;
+padding:4px 8px;
+text-align:center;
+border-radius:4px;
+background-color:crimson;
+cursor:pointer;
+}
+
+input[type=reset]:hover{
+box-shadow: 2px 2px 2px gold ;
+background-color:white;
+}

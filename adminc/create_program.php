@@ -1,0 +1,139 @@
+<?php
+require_once"header.php";
+?>
+<?php 
+require_once"class/program.class.php";
+$program = new Program();
+if(isset($_POST['btnSave'])){
+  $error=[];
+  $program->set('course_name',$_POST['course_name']);
+
+   $program->set('academic_requirement',$_POST['academic_requirement']);
+   $program->set('description',$_POST['description']);
+   $program->set('syllables',$_POST['syllables']);
+  $program->set('credit_hours',$_POST['credit_hours']);
+  if(count($error)==0){
+    $msg = $program->create();
+  }
+
+}
+?>
+
+        <!-- page content -->
+        
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Program Management</h3><br>
+              </div>
+
+             
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+
+                    <h2>Add College Programs</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                  <?php  if(isset($msg)){
+                    echo $msg;
+                   } ?>
+                    <br />
+
+                   
+                    <form id="catform" data-parsley-validate class="form-horizontal form-label-left" method="post" action="">
+
+                      <div class="form-group">
+
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Course Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" required="required" name="course_name" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="academic_requirement" class="control-label col-md-3 col-sm-3 col-xs-12">Academic Requirement<span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea class="form-control col-md-7 col-xs-12 ckeditor" type="text" name="academic_requirement"></textarea>
+                          
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Description<span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea  class="form-control col-md-7 col-xs-12 ckeditor" type="text" name="description"></textarea>
+                          
+                        </div>
+                      </div>
+
+
+                        
+
+                         <div class="form-group">
+                        <label for="syllables" class="control-label col-md-3 col-sm-3 col-xs-12">Syllables<span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea class="form-control col-md-7 col-xs-12 ckeditor" type="text" name="syllables"></textarea>
+                          
+                        </div>
+                      </div>
+
+                        <div class="form-group">
+                        <label for="credit_hours" class="control-label col-md-3 col-sm-3 col-xs-12">Credit Hours<span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input  class="form-control col-md-7 col-xs-12" type="credit_hours" name="credit_hours">
+                          
+                        </div>
+                      </div>
+                      
+                      
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <input type="submit" name="btnSave" class="btn btn-success" value="Save"/>
+              <input type="reset" class="btn btn-danger" value="Clear">
+                          
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+   
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <?php 
+        require_once"footer.php";
+        ?>
+
+        <script type="text/javascript" src="validation/dist/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('#catform').validate();
+          });
+        </script>
+
+       
+        
